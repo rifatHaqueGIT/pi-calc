@@ -25,7 +25,8 @@ int main(int argc, char ** argv)
   if( 1 != sscanf( argv[2], "%d", & n_threads)) usage();
   if( r < 0 || r > 100000 || n_threads < 1 || n_threads > 256) usage();
   
-  std::cout << "Calculating PI with r=" << r << "\n";
+  std::cout << "Calculating PI with r=" << r
+            << " and n_threads=" << n_threads << "\n";
   uint64_t count = count_pi(r, n_threads);
   std::cout << "count: " << count << "\n";
   std::cout << "PI:    " << std::setprecision(15) << count / (double(r) * r) << "\n";
