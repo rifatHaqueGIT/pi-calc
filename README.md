@@ -1,6 +1,6 @@
 Calculates PI by summing the circle's area, as explained here:
 
-https://en.wikipedia.org/wiki/Approximations_of_%CF%80
+https://en.wikipedia.org/wiki/Approximations_of_%CF%80#Summing_a_circle's_area
 
 You need to re-implement `count_pi()` in calcpi.cpp to make it multi-threaded.
 
