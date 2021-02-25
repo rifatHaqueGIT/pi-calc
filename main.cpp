@@ -27,8 +27,9 @@ int main(int argc, char ** argv)
   
   std::cout << "Calculating PI with r=" << r
             << " and n_threads=" << n_threads << "\n";
-  uint64_t count = count_pi(r, n_threads);
+  uint64_t count = count_pixels(r, n_threads);
+  double pi = count / (double(r) * r);
   std::cout << "count: " << count << "\n";
-  std::cout << "PI:    " << std::setprecision(15) << count / (double(r) * r) << "\n";
+  std::cout << "PI:    " << std::setprecision(15) << pi << "\n";
   return 0;
 }

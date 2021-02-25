@@ -7,7 +7,7 @@
 //
 // https://en.wikipedia.org/wiki/Approximations_of_%CF%80
 //
-// count_pi() takes 2 paramters:
+// count_pixels() takes 2 paramters:
 //  r         =  the radius of the circle
 //  n_threads =  the number of threads you should create
 //
@@ -17,12 +17,12 @@
 
 #include "calcpi.h"
 
-uint64_t count_pi(int r, int n_threads)
+uint64_t count_pixels(int r, int n_threads)
 {
   double rsq = double(r) * r;
   uint64_t count = 0;
-  for( double x = -r ; x <= r ; x ++)
-    for( double y = -r ; y <= r ; y ++)
+  for( double x = 1 ; x <= r ; x ++)
+    for( double y = 0 ; y <= r ; y ++)
       if( x*x + y*y <= rsq) count ++;
-  return count;
+  return count * 4 + 1;
 }
